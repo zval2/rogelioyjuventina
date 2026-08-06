@@ -57,7 +57,7 @@ h1 span{color:var(--gold);font-size:.72em}
 @keyframes buttonShine{0%,58%{left:-30%;opacity:0}68%{opacity:.8}84%,100%{left:125%;opacity:0}}
 @keyframes buttonPulse{0%,100%{box-shadow:0 15px 40px rgba(215,180,91,.2)}50%{box-shadow:0 18px 55px rgba(215,180,91,.38)}}
 @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
-@keyframes slowZoom{0%{scale:1}100%{scale:1.035}}
+@keyframes slowZoom{0%{scale:1}100%{scale:1.065}}{0%{scale:1}100%{scale:1.035}}
 @keyframes cardShimmer{0%,42%{left:-70%;opacity:0}52%{opacity:.7}68%,100%{left:140%;opacity:0}}
 
 @media(max-width:560px){

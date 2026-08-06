@@ -69,7 +69,7 @@ openBtn.addEventListener("click", async () => {
 shareBtn.addEventListener("click", async () => {
   const shareData = {
     title: "Nuestra Boda | Rogelio y Juventina",
-    text: "Acompáñanos a celebrar nuestra boda el 19 de septiembre de 2026.",
+    text: "Acompáñanos a celebrar nuestra boda el 19 de Septiembre 2026.",
     url: window.location.href
   };
 
