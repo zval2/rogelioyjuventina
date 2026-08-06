@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#090405">
+  <meta name="theme-color" content="#71142d">
   <meta name="description" content="Nuestra Boda — Rogelio y Juventina — 19 de Septiembre 2026.">
 
   <meta property="og:type" content="website">
@@ -11,13 +11,19 @@
   <meta property="og:title" content="Nuestra Boda | Rogelio y Juventina">
   <meta property="og:description" content="Acompáñanos a celebrar nuestra boda el 19 de Septiembre 2026.">
   <meta property="og:url" content="https://zval2.github.io/rogelioyjuventina/">
-  <meta property="og:image" content="https://zval2.github.io/rogelioyjuventina/front.jpg">
+  <meta property="og:image" content="https://zval2.github.io/rogelioyjuventina/preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Invitación de boda de Rogelio y Juventina">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nuestra Boda | Rogelio y Juventina">
   <meta name="twitter:description" content="19 de Septiembre 2026">
-  <meta name="twitter:image" content="https://zval2.github.io/rogelioyjuventina/front.jpg">
+  <meta name="twitter:image" content="https://zval2.github.io/rogelioyjuventina/preview.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
   <title>Nuestra Boda | Rogelio y Juventina</title>
 
@@ -28,7 +34,6 @@
 </head>
 <body>
   <div class="vignette" aria-hidden="true"></div>
-
   <div class="ambient" aria-hidden="true">
     <div id="sparkles"></div>
     <div id="petals"></div>
@@ -40,11 +45,7 @@
 
   <section id="intro" class="intro">
     <div class="intro-glow" aria-hidden="true"></div>
-
-    <div class="monogram" aria-hidden="true">
-      <span>R</span><i>♥</i><span>J</span>
-    </div>
-
+    <div class="monogram" aria-hidden="true"><span>R</span><i>♥</i><span>J</span></div>
     <p class="eyebrow">Nuestra Boda</p>
     <h1>Rogelio <span>y</span> Juventina</h1>
     <p class="date">19 de Septiembre 2026</p>
@@ -55,11 +56,9 @@
       <div><strong id="minutes">0</strong><small>Min</small></div>
       <div><strong id="seconds">0</strong><small>Seg</small></div>
     </div>
+    <p id="dayMessage" class="day-message" hidden></p>
 
-    <button id="openBtn" class="gold-button" type="button">
-      <span>Abrir Invitación</span>
-    </button>
-
+    <button id="openBtn" class="gold-button" type="button"><span>Abrir Invitación</span></button>
     <p class="sound-note">La música comenzará al abrir la invitación.</p>
   </section>
 
@@ -79,7 +78,7 @@
     </section>
 
     <section class="finale">
-      <p class="finale-script">Gracias por acompañarnos en este momento tan especial</p>
+      <p class="finale-script">Con mucho cariño, los esperamos para celebrar juntos este día tan especial</p>
       <p class="finale-names">Rogelio y Juventina</p>
       <p class="finale-date">19 de Septiembre 2026</p>
 
@@ -88,16 +87,13 @@
            href="https://www.google.com/maps/search/?api=1&query=976+E+47th+St+Los+Angeles+CA+90011"
            target="_blank"
            rel="noopener noreferrer">
-          <span aria-hidden="true">⌖</span>
-          Recepción
+          <span aria-hidden="true">⌖</span>Recepción
         </a>
 
         <button id="shareBtn" class="action-button" type="button">
-          <span aria-hidden="true">↗</span>
-          Compartir
+          <span aria-hidden="true">↗</span>Compartir
         </button>
       </div>
-
       <p id="shareMessage" class="share-message" role="status" aria-live="polite"></p>
     </section>
   </main>

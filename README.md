@@ -1,24 +1,19 @@
-# Invitación de Rogelio y Juventina — versión premium
+# Invitación Rogelio y Juventina — Version 4
 
 Incluye:
+- intro refinada
+- música con entrada gradual
+- invitación casi a pantalla completa
+- animación de entrada flotando hacia arriba
+- menos pétalos y destellos más suaves
+- borde dorado con respiración
+- cuenta regresiva automática
+- mensaje especial el día de la boda y después
+- favicon
+- icono para pantalla de inicio
+- manifiesto de aplicación
+- vista previa social 1200×630
+- sin cita ni controles de música
 
-- Invitación casi a pantalla completa en teléfonos
-- Transición cinematográfica al abrir
-- Música continua sin controles
-- Destellos más suaves
-- Menos pétalos, más grandes y lentos
-- Zoom más visible
-- Barrido de luz dorada
-- Vista previa para WhatsApp, iMessage y redes sociales
-- Cierre renovado
-- Botones de Recepción y Compartir
-
-## Actualizar el sitio
-
-1. Reemplaza todos los archivos de tu carpeta local con estos.
-2. Prueba `index.html`.
-3. En GitHub Desktop: **Commit to main** y después **Push origin**.
-4. Espera un minuto y actualiza el sitio.
-
-Sitio:
-https://zval2.github.io/rogelioyjuventina/
+## Publicación
+Reemplaza todos los archivos, prueba `index.html`, haz Commit y Push en GitHub Desktop.
