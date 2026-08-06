@@ -4,6 +4,7 @@ const invitation = document.getElementById("invitation");
 const music = document.getElementById("music");
 const shareBtn = document.getElementById("shareBtn");
 const shareMessage = document.getElementById("shareMessage");
+const transitionCurtain = document.getElementById("transitionCurtain");
 
 const weddingDate = new Date("2026-09-19T15:00:00-07:00").getTime();
 
@@ -17,27 +18,27 @@ function updateCountdown() {
 
 function createSparkles() {
   const container = document.getElementById("sparkles");
-  for (let i = 0; i < 52; i += 1) {
+  for (let i = 0; i < 34; i += 1) {
     const sparkle = document.createElement("span");
     sparkle.className = "sparkle";
     sparkle.style.left = `${Math.random() * 100}%`;
     sparkle.style.top = `${Math.random() * 100}%`;
-    sparkle.style.setProperty("--duration", `${4 + Math.random() * 7}s`);
-    sparkle.style.setProperty("--delay", `${Math.random() * -8}s`);
+    sparkle.style.setProperty("--duration", `${6 + Math.random() * 9}s`);
+    sparkle.style.setProperty("--delay", `${Math.random() * -10}s`);
     container.appendChild(sparkle);
   }
 }
 
 function createPetals() {
   const container = document.getElementById("petals");
-  for (let i = 0; i < 13; i += 1) {
+  for (let i = 0; i < 8; i += 1) {
     const petal = document.createElement("span");
     petal.className = "petal";
     petal.style.left = `${Math.random() * 100}%`;
-    petal.style.setProperty("--size", `${8 + Math.random() * 9}px`);
-    petal.style.setProperty("--drift", `${-70 + Math.random() * 140}px`);
-    petal.style.setProperty("--duration", `${11 + Math.random() * 11}s`);
-    petal.style.setProperty("--delay", `${Math.random() * -18}s`);
+    petal.style.setProperty("--size", `${13 + Math.random() * 12}px`);
+    petal.style.setProperty("--drift", `${-85 + Math.random() * 170}px`);
+    petal.style.setProperty("--duration", `${16 + Math.random() * 12}s`);
+    petal.style.setProperty("--delay", `${Math.random() * -24}s`);
     container.appendChild(petal);
   }
 }
@@ -53,24 +54,29 @@ openBtn.addEventListener("click", async () => {
   }
 
   intro.classList.add("is-leaving");
+  transitionCurtain.classList.add("is-active");
 
   setTimeout(() => {
     intro.style.display = "none";
     invitation.classList.add("is-visible");
     invitation.setAttribute("aria-hidden", "false");
+  }, 650);
 
-    requestAnimationFrame(() => {
-      invitation.classList.add("is-revealed");
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }, 1000);
+  setTimeout(() => {
+    invitation.classList.add("is-revealed");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, 1080);
+
+  setTimeout(() => {
+    transitionCurtain.classList.remove("is-active");
+  }, 1700);
 });
 
 shareBtn.addEventListener("click", async () => {
   const shareData = {
     title: "Nuestra Boda | Rogelio y Juventina",
     text: "Acompáñanos a celebrar nuestra boda el 19 de Septiembre 2026.",
-    url: window.location.href
+    url: "https://zval2.github.io/rogelioyjuventina/"
   };
 
   shareMessage.textContent = "";
@@ -85,7 +91,7 @@ shareBtn.addEventListener("click", async () => {
   }
 
   try {
-    await navigator.clipboard.writeText(window.location.href);
+    await navigator.clipboard.writeText(shareData.url);
     shareMessage.textContent = "Enlace copiado.";
   } catch (error) {
     shareMessage.textContent = "Copia el enlace desde la barra del navegador.";

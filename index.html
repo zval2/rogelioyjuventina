@@ -3,20 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#070504">
-  <meta name="description" content="Invitación de boda de Rogelio y Juventina — 19 de Septiembre 2026.">
+  <meta name="theme-color" content="#090405">
+  <meta name="description" content="Nuestra Boda — Rogelio y Juventina — 19 de Septiembre 2026.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:title" content="Nuestra Boda | Rogelio y Juventina">
+  <meta property="og:description" content="Acompáñanos a celebrar nuestra boda el 19 de Septiembre 2026.">
+  <meta property="og:url" content="https://zval2.github.io/rogelioyjuventina/">
+  <meta property="og:image" content="https://zval2.github.io/rogelioyjuventina/front.jpg">
+  <meta property="og:image:alt" content="Invitación de boda de Rogelio y Juventina">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nuestra Boda | Rogelio y Juventina">
+  <meta name="twitter:description" content="19 de Septiembre 2026">
+  <meta name="twitter:image" content="https://zval2.github.io/rogelioyjuventina/front.jpg">
+
   <title>Nuestra Boda | Rogelio y Juventina</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="vignette" aria-hidden="true"></div>
+
   <div class="ambient" aria-hidden="true">
     <div id="sparkles"></div>
     <div id="petals"></div>
+  </div>
+
+  <div id="transitionCurtain" class="transition-curtain" aria-hidden="true">
+    <div class="curtain-glow"></div>
   </div>
 
   <section id="intro" class="intro">
@@ -28,7 +47,7 @@
 
     <p class="eyebrow">Nuestra Boda</p>
     <h1>Rogelio <span>y</span> Juventina</h1>
-    <p class="date">19 de Septiembre de 2026</p>
+    <p class="date">19 de Septiembre 2026</p>
 
     <div id="countdown" class="countdown" aria-label="Cuenta regresiva para la boda">
       <div><strong id="days">0</strong><small>Días</small></div>
@@ -46,23 +65,23 @@
 
   <main id="invitation" class="invitation" aria-hidden="true">
     <section class="card-section front-section">
-      <div class="card-frame">
-        <div class="shimmer" aria-hidden="true"></div>
+      <div class="card-frame entrance-card">
+        <div class="one-time-sweep" aria-hidden="true"></div>
         <img src="front.jpg" alt="Frente de la invitación de boda de Rogelio y Juventina">
       </div>
     </section>
 
     <section class="card-section back-section">
       <div class="card-frame">
-        <div class="shimmer shimmer-delay" aria-hidden="true"></div>
+        <div class="soft-sweep" aria-hidden="true"></div>
         <img src="back.jpg" alt="Reverso de la invitación con los detalles de la boda">
       </div>
     </section>
 
     <section class="finale">
-      <p class="finale-script">Los esperamos con mucho cariño</p>
+      <p class="finale-script">Gracias por acompañarnos en este momento tan especial</p>
       <p class="finale-names">Rogelio y Juventina</p>
-      <p class="finale-date">19 de Septiembre de 2026</p>
+      <p class="finale-date">19 de Septiembre 2026</p>
 
       <div class="actions">
         <a class="action-button"

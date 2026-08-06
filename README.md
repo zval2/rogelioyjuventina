@@ -1,15 +1,24 @@
-# Invitación de Rogelio y Juventina
+# Invitación de Rogelio y Juventina — versión premium
 
-Versión final de lujo.
+Incluye:
 
-## Publicar con GitHub Pages
+- Invitación casi a pantalla completa en teléfonos
+- Transición cinematográfica al abrir
+- Música continua sin controles
+- Destellos más suaves
+- Menos pétalos, más grandes y lentos
+- Zoom más visible
+- Barrido de luz dorada
+- Vista previa para WhatsApp, iMessage y redes sociales
+- Cierre renovado
+- Botones de Recepción y Compartir
 
-1. Reemplaza los archivos de tu carpeta local con estos archivos.
+## Actualizar el sitio
+
+1. Reemplaza todos los archivos de tu carpeta local con estos.
 2. Prueba `index.html`.
-3. En GitHub Desktop, haz **Commit to main**.
-4. Haz **Push origin**.
-5. En GitHub: **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
+3. En GitHub Desktop: **Commit to main** y después **Push origin**.
+4. Espera un minuto y actualiza el sitio.
 
 Sitio:
 https://zval2.github.io/rogelioyjuventina/
-
