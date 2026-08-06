@@ -2,31 +2,21 @@ const openBtn = document.getElementById("openBtn");
 const intro = document.getElementById("intro");
 const invitation = document.getElementById("invitation");
 const music = document.getElementById("music");
-const showBackBtn = document.getElementById("showBackBtn");
-const backSection = document.getElementById("backSection");
 const shareBtn = document.getElementById("shareBtn");
 const shareMessage = document.getElementById("shareMessage");
 
 const weddingDate = new Date("2026-09-19T15:00:00-07:00").getTime();
 
 function updateCountdown() {
-  const now = Date.now();
-  const distance = Math.max(0, weddingDate - now);
-
-  const days = Math.floor(distance / 86400000);
-  const hours = Math.floor((distance % 86400000) / 3600000);
-  const minutes = Math.floor((distance % 3600000) / 60000);
-  const seconds = Math.floor((distance % 60000) / 1000);
-
-  document.getElementById("days").textContent = days;
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+  const distance = Math.max(0, weddingDate - Date.now());
+  document.getElementById("days").textContent = Math.floor(distance / 86400000);
+  document.getElementById("hours").textContent = String(Math.floor((distance % 86400000) / 3600000)).padStart(2, "0");
+  document.getElementById("minutes").textContent = String(Math.floor((distance % 3600000) / 60000)).padStart(2, "0");
+  document.getElementById("seconds").textContent = String(Math.floor((distance % 60000) / 1000)).padStart(2, "0");
 }
 
 function createSparkles() {
   const container = document.getElementById("sparkles");
-
   for (let i = 0; i < 52; i += 1) {
     const sparkle = document.createElement("span");
     sparkle.className = "sparkle";
@@ -40,7 +30,6 @@ function createSparkles() {
 
 function createPetals() {
   const container = document.getElementById("petals");
-
   for (let i = 0; i < 13; i += 1) {
     const petal = document.createElement("span");
     petal.className = "petal";
@@ -65,7 +54,7 @@ openBtn.addEventListener("click", async () => {
 
   intro.classList.add("is-leaving");
 
-  window.setTimeout(() => {
+  setTimeout(() => {
     intro.style.display = "none";
     invitation.classList.add("is-visible");
     invitation.setAttribute("aria-hidden", "false");
@@ -74,11 +63,7 @@ openBtn.addEventListener("click", async () => {
       invitation.classList.add("is-revealed");
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  }, 900);
-});
-
-showBackBtn.addEventListener("click", () => {
-  backSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 1000);
 });
 
 shareBtn.addEventListener("click", async () => {
@@ -108,6 +93,6 @@ shareBtn.addEventListener("click", async () => {
 });
 
 updateCountdown();
-window.setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);
 createSparkles();
 createPetals();

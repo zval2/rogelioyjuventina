@@ -1,25 +1,14 @@
 # Invitación de Rogelio y Juventina
 
-Sitio de invitación de boda en español.
+Versión final de lujo.
 
 ## Publicar con GitHub Pages
 
-1. Sube todos los archivos de esta carpeta a la raíz del repositorio.
-2. En GitHub, abre **Settings**.
-3. En el menú izquierdo, abre **Pages**.
-4. En **Build and deployment**, selecciona **Deploy from a branch**.
-5. Selecciona la rama **main** y la carpeta **/(root)**.
-6. Haz clic en **Save**.
+1. Reemplaza los archivos de tu carpeta local con estos archivos.
+2. Prueba `index.html`.
+3. En GitHub Desktop, haz **Commit to main**.
+4. Haz **Push origin**.
+5. En GitHub: **Settings → Pages → Deploy from a branch → main → /(root) → Save**.
 
-El sitio quedará disponible en:
-
+Sitio:
 https://zval2.github.io/rogelioyjuventina/
-
-## Archivos
-
-- `index.html`
-- `style.css`
-- `script.js`
-- `front.jpg`
-- `back.jpg`
-- `music.mp3`
