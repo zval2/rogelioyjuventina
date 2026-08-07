@@ -82,3 +82,159 @@ body.invitation-open .floating-map{display:flex}
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
 }
+
+/* ===== CLEAN OPENING SEQUENCE: RINGS -> BACK FOR 5 SEC -> NORMAL SITE ===== */
+.cinematic-overlay{
+  position:fixed;
+  inset:0;
+  z-index:60;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at center, rgba(113,20,45,.18), transparent 54%),
+    #050203;
+  opacity:0;
+  pointer-events:none;
+}
+
+.cinematic-overlay.active{
+  display:flex;
+  animation:cinematicFadeIn .35s ease forwards;
+}
+
+.ring-stage{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+}
+
+.ring-stage.show{
+  animation:ringStageLife 1.85s ease both;
+}
+
+.wedding-rings{
+  position:relative;
+  width:150px;
+  height:92px;
+  filter:drop-shadow(0 0 18px rgba(216,182,95,.35));
+}
+
+.ring{
+  position:absolute;
+  top:10px;
+  width:78px;
+  height:78px;
+  border:5px solid #d8b65f;
+  border-radius:50%;
+  box-shadow:
+    inset 0 0 12px rgba(248,229,167,.22),
+    0 0 22px rgba(216,182,95,.25);
+}
+
+.ring-left{
+  left:13px;
+  transform:rotate(-13deg) scale(.72);
+  animation:ringLeftEnter 1.25s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.ring-right{
+  right:13px;
+  transform:rotate(13deg) scale(.72);
+  animation:ringRightEnter 1.25s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.ring-glow{
+  width:245px;
+  height:245px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(216,182,95,.24),transparent 67%);
+  filter:blur(18px);
+  animation:ringGlowPulse 1.7s ease both;
+}
+
+.back-preview{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .55s ease, visibility .55s ease;
+}
+
+.back-preview.show{
+  opacity:1;
+  visibility:visible;
+}
+
+.back-preview-card{
+  width:auto;
+  max-width:99vw;
+  max-height:96svh;
+  overflow:visible;
+  border:none;
+  border-radius:0;
+  background:transparent;
+  box-shadow:
+    0 36px 95px rgba(0,0,0,.72),
+    0 0 60px rgba(216,182,95,.16);
+  animation:backPreviewBreath 5s ease-in-out both;
+}
+
+.back-preview-card img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:99vw;
+  max-height:96svh;
+  object-fit:contain;
+  background:transparent;
+}
+
+@keyframes cinematicFadeIn{
+  from{opacity:0}
+  to{opacity:1}
+}
+
+@keyframes ringStageLife{
+  0%{opacity:0}
+  14%{opacity:1}
+  72%{opacity:1}
+  100%{opacity:0}
+}
+
+@keyframes ringLeftEnter{
+  0%{opacity:0;transform:translateX(-42px) rotate(-22deg) scale(.55)}
+  62%{opacity:1;transform:translateX(5px) rotate(-8deg) scale(1.05)}
+  100%{opacity:1;transform:translateX(0) rotate(-10deg) scale(1)}
+}
+
+@keyframes ringRightEnter{
+  0%{opacity:0;transform:translateX(42px) rotate(22deg) scale(.55)}
+  62%{opacity:1;transform:translateX(-5px) rotate(8deg) scale(1.05)}
+  100%{opacity:1;transform:translateX(0) rotate(10deg) scale(1)}
+}
+
+@keyframes ringGlowPulse{
+  0%{opacity:0;transform:scale(.6)}
+  45%{opacity:1;transform:scale(1)}
+  100%{opacity:0;transform:scale(1.28)}
+}
+
+@keyframes backPreviewBreath{
+  0%{transform:scale(.985);opacity:.78}
+  18%{transform:scale(1);opacity:1}
+  100%{transform:scale(1.025);opacity:1}
+}
+
+@media(max-width:560px){
+  .back-preview{padding:2px}
+  .back-preview-card{width:auto;max-width:99vw;border-radius:0}
+  .wedding-rings{transform:scale(.88)}
+}
